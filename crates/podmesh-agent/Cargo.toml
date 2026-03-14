@@ -1,0 +1,28 @@
+[package]
+name = "podmesh-agent"
+description = "PodMesh node agent — lightweight daemon that bridges PodMesh server to local Podman"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "podmesh-agent"
+path = "src/main.rs"
+
+[dependencies]
+podmesh-core = { workspace = true }
+podmesh-client = { workspace = true }
+axum = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+anyhow = { workspace = true }
+clap = { workspace = true }
+tower-http = { workspace = true }
+hyper = { workspace = true }
+hyper-util = { workspace = true }
+http-body-util = { workspace = true }

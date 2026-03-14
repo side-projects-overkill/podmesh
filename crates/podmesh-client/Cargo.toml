@@ -1,0 +1,20 @@
+[package]
+name = "podmesh-client"
+description = "Podman REST API client over Unix socket"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+podmesh-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+hyper = { workspace = true }
+hyper-util = { workspace = true }
+http-body-util = { workspace = true }
+futures = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+urlencoding = "2"
