@@ -1,0 +1,31 @@
+[package]
+name = "podmesh-server"
+description = "PodMesh central API server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "podmesh-server"
+path = "src/main.rs"
+
+[dependencies]
+podmesh-core = { workspace = true }
+podmesh-client = { workspace = true }
+axum = { workspace = true }
+axum-extra = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+utoipa = { workspace = true }
+utoipa-swagger-ui = { workspace = true }
+futures = { workspace = true }
+config = { workspace = true }
