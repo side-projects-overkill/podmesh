@@ -37,6 +37,11 @@ export const api = {
   containers: {
     list: (all = false) => request<unknown[]>(`/api/containers?all=${all}`),
     get: (id: string) => request<unknown>(`/api/containers/${id}`),
+    create: (spec: { name?: string; image: string; cmd?: string[]; env?: string[]; ports?: Array<{ host_port: number; container_port: number; protocol?: string }>; labels?: Record<string, string> }) =>
+      request<unknown>("/api/containers", {
+        method: "POST",
+        body: JSON.stringify(spec),
+      }),
     start: (id: string) => request<unknown>(`/api/containers/${id}/start`, { method: "POST" }),
     stop: (id: string) => request<unknown>(`/api/containers/${id}/stop`, { method: "POST" }),
     restart: (id: string) => request<unknown>(`/api/containers/${id}/restart`, { method: "POST" }),
